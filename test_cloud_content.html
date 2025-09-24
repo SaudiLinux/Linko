@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cloud Vulnerability Test Page</title>
+</head>
+<body>
+    <h1>Cloud Infrastructure Configuration</h1>
+    
+    <!-- Exposed AWS Credentials -->
+    <div id="aws-config" style="display:none;">
+        <h3>AWS Configuration</h3>
+        <pre>
+aws_access_key_id: AKIAIOSFODNN7EXAMPLE
+aws_secret_access_key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+region: us-west-2
+        </pre>
+    </div>
+    
+    <!-- Exposed Azure Configuration -->
+    <div id="azure-config" style="display:none;">
+        <h3>Azure Configuration</h3>
+        <pre>
+azure_storage_key: DefaultEndpointsProtocol=https;AccountName=mystorage;AccountKey=examplekey123
+tenant_id: 12345678-1234-1234-1234-123456789012
+        </pre>
+    </div>
+    
+    <!-- Exposed Google Cloud Service Account -->
+    <div id="gcp-config" style="display:none;">
+        <h3>Google Cloud Configuration</h3>
+        <pre>
+{
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC7VJTUt9Us8cKB\n...\n-----END PRIVATE KEY-----\n",
+  "gcp_service_account": "my-service-account@project.iam.gserviceaccount.com"
+}
+        </pre>
+    </div>
+    
+    <!-- Terraform State Information -->
+    <div id="terraform-info">
+        <h3>Infrastructure as Code</h3>
+        <p>Terraform state file contains sensitive infrastructure data. File: terraform.tfstate</p>
+    </div>
+    
+    <!-- Kubernetes Configuration -->
+    <div id="k8s-config">
+        <h3>Kubernetes Cluster Info</h3>
+        <pre>
+kubeconfig file contains cluster_ca_certificate and kubernetes_config
+        </pre>
+    </div>
+    
+    <!-- Cloud Storage Buckets -->
+    <div id="storage-info">
+        <h3>Cloud Storage</h3>
+        <ul>
+            <li>s3.amazonaws.com/my-bucket</li>
+            <li>storage.googleapis.com/my-gcp-bucket</li>
+            <li>blob.core.windows.net/my-azure-container</li>
+        </ul>
+    </div>
+    
+    <!-- Network Configuration -->
+    <div id="network-config">
+        <h3>Network Configuration</h3>
+        <pre>
+Security Groups: 0.0.0.0/0
+Public Subnet: Enabled
+Internet Gateway: igw-12345678
+        </pre>
+    </div>
+    
+    <!-- IAM Configuration -->
+    <div id="iam-config">
+        <h3>Identity and Access Management</h3>
+        <pre>
+IAM User: admin-user
+IAM Role: administrator_access
+Administrator Access: Granted
+        </pre>
+    </div>
+    
+    <!-- Serverless Functions -->
+    <div id="serverless-config">
+        <h3>Serverless Functions</h3>
+        <pre>
+Lambda Secret: my-lambda-function-secret-key
+Function Secret: azure-function-app-secret
+Serverless Secret: gcp-cloud-function-secret
+        </pre>
+    </div>
+    
+    <!-- Backup Configuration -->
+    <div id="backup-config">
+        <h3>Backup Configuration</h3>
+        <pre>
+Backup Bucket: my-public-backup-bucket
+Snapshot Public: true
+Backup Public: enabled
+        </pre>
+    </div>
+    
+    <!-- Logging Configuration -->
+    <div id="logging-config">
+        <h3>Logging Status</h3>
+        <pre>
+Logging: disable_logging=true
+Audit: no_audit=enabled
+Monitoring: skip_monitoring=true
+        </pre>
+    </div>
+    
+    <!-- Encryption Keys -->
+    <div id="encryption-config">
+        <h3>Encryption Configuration</h3>
+        <pre>
+KMS Key: customer_managed_key_rotation
+Encryption Key: cloud_encryption_key_v1
+        </pre>
+    </div>
+    
+    <script>
+        // JavaScript configuration with cloud secrets
+        var cloudConfig = {
+            "cloud_api_key": "my-cloud-api-gateway-key",
+            "function_app_key": "azure-function-app-key-123",
+            "api_gateway_key": "aws-api-gateway-key-456"
+        };
+        
+        // Docker registry configuration
+        var dockerConfig = {
+            "docker_registry": "my-registry.docker.com",
+            "container_registry": "my-container-registry.azurecr.io",
+            "registry_auth": "registry-auth-token-789"
+        };
+        
+        // Database credentials
+        var dbConfig = {
+            "rds_password": "my-rds-database-password",
+            "azure_sql_password": "azure-sql-server-password",
+            "cloudsql_password": "gcp-cloud-sql-password"
+        };
+    </script>
+</body>
+</html>

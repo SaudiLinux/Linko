@@ -1,0 +1,24 @@
+
+Lighter Security Scanner Report
+===============================
+Target: scanme.nmap.org
+Scan Time: 2025-09-24 00:54:02
+Developer: SayerLinux (SaudiLinux1@gmail.com)
+
+Open Ports: 80
+
+Web Servers Detected:
+  - Apache on port 80 (http)
+    Frameworks: 
+    CMS: magento
+    Vulnerability: Server Version Disclosure (low)
+    Vulnerability: X-Frame-Options Missing (medium)
+    Vulnerability: X-Content-Type-Options Missing (low)
+
+Email Servers Detected:
+
+Databases Detected:
+
+CI/CD Platforms Detected:
+
+Container/Orchestration Platforms:

@@ -1,0 +1,260 @@
+{
+  "target": "google.com",
+  "scan_time": "2025-09-25 00:01:19",
+  "web_servers": [
+    {
+      "port": 80,
+      "protocol": "http",
+      "status_code": 200,
+      "headers": {
+        "Date": "Wed, 24 Sep 2025 21:01:38 GMT",
+        "Expires": "-1",
+        "Cache-Control": "private, max-age=0",
+        "Content-Type": "text/html; charset=ISO-8859-1",
+        "Content-Security-Policy-Report-Only": "object-src 'none';base-uri 'self';script-src 'nonce-kiKtWgUM1DP9Ak9W07aT6g' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+        "P3P": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+        "Content-Encoding": "gzip",
+        "Server": "gws",
+        "X-XSS-Protection": "0",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Transfer-Encoding": "chunked",
+        "Set-Cookie": "AEC=AaJma5sbqxPB10WR-JJYuh0N48YFVmeLueUgWVWqNrYQ8_JJOsK2sHNv6A; expires=Mon, 23-Mar-2026 21:01:38 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax, NID=525=LphuER2OE5Wai9vAiAhsuiL0_cUXWoI2jZb4cH8uVumKYO5c786B8zZlgQmdUmW3LPpZ_9PT4sBCgbv6A_sHtIvbbDqOWv81cv7SPMY86depYLFEfXzqNA8-pzbEP3IimagrVkumFp5HaffTtZ0STslstkOrBD76ys66p9JlKSB1HS5jk__5NpHqcFag2RktTH-jixNKecz8Pyi1iWQ; expires=Thu, 26-Mar-2026 21:01:38 GMT; path=/; domain=.google.com; HttpOnly"
+      },
+      "server_type": "unknown",
+      "sensitive_files": [],
+      "vulnerability_links": [],
+      "frameworks": [],
+      "cms": [
+        "magento"
+      ],
+      "vulnerabilities": [
+        {
+          "name": "Server Version Disclosure",
+          "severity": "low",
+          "url": "http://google.com:80"
+        },
+        {
+          "name": "X-Content-Type-Options Missing",
+          "severity": "low",
+          "url": "http://google.com:80"
+        },
+        {
+          "name": "Insecure Cookie Configuration",
+          "severity": "medium",
+          "url": "http://google.com:80"
+        }
+      ],
+      "social_engineering_vulnerabilities": [
+        {
+          "name": "Login Form Without HTTPS",
+          "severity": "high",
+          "type": "phishing_vector",
+          "url": "http://google.com:80",
+          "description": "Login forms transmitted over HTTP are vulnerable to credential interception and man-in-the-middle attacks",
+          "mitigation": "Implement HTTPS for all authentication pages and enforce TLS encryption"
+        },
+        {
+          "name": "Suspicious Domain Similarity",
+          "severity": "high",
+          "type": "phishing_vector",
+          "url": "http://google.com:80",
+          "description": "Domain patterns that could indicate typosquatting or phishing domains",
+          "mitigation": "Register similar domains and monitor for typosquatting attacks"
+        },
+        {
+          "name": "Helpful Error Messages",
+          "severity": "low",
+          "type": "human_factor",
+          "url": "http://google.com:80",
+          "description": "Detailed error messages can leak system information to attackers",
+          "mitigation": "Implement generic error messages that don't reveal system information"
+        }
+      ],
+      "cryptographic_vulnerabilities": [],
+      "cloud_vulnerabilities": []
+    },
+    {
+      "port": 443,
+      "protocol": "https",
+      "status_code": 200,
+      "headers": {
+        "Date": "Wed, 24 Sep 2025 21:01:35 GMT",
+        "Expires": "-1",
+        "Cache-Control": "private, max-age=0",
+        "Content-Type": "text/html; charset=ISO-8859-1",
+        "Content-Security-Policy-Report-Only": "object-src 'none';base-uri 'self';script-src 'nonce-HikAYLbBkKMlCe0D3VWDjQ' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+        "Accept-CH": "Sec-CH-Prefers-Color-Scheme",
+        "P3P": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+        "Content-Encoding": "gzip",
+        "Server": "gws",
+        "X-XSS-Protection": "0",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Set-Cookie": "AEC=AaJma5u8uT7AHeqqiT-9CwuBKKaFaDjfRx6HAXBk_UOLum1-7jYFvl-cfA; expires=Mon, 23-Mar-2026 21:01:35 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax, NID=525=KJrIBywk2RNvRanLLOrhyOqGeZrFcv0_gsV5-4ehXR-DHFRJjCGqs7fACneMH7C5yRHSWoS_2O3FYNbenIVc8S-I9PmccAGnjWt33v65dy84fidkNIG4Y5DWe72d7Y-RzqAbR7QX6MxW1cbtvSBEDdKgh6B7mRI9n2_LPZYNbeh02cLuWFK2e03S5WbVaPnAoKRaUvkZEou8PWot1g; expires=Thu, 26-Mar-2026 21:01:35 GMT; path=/; domain=.google.com; HttpOnly",
+        "Alt-Svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "Transfer-Encoding": "chunked"
+      },
+      "server_type": "unknown",
+      "sensitive_files": [],
+      "vulnerability_links": [],
+      "frameworks": [],
+      "cms": [
+        "magento"
+      ],
+      "vulnerabilities": [
+        {
+          "name": "Server Version Disclosure",
+          "severity": "low",
+          "url": "https://google.com:443"
+        },
+        {
+          "name": "X-Content-Type-Options Missing",
+          "severity": "low",
+          "url": "https://google.com:443"
+        },
+        {
+          "name": "Insecure Cookie Configuration",
+          "severity": "medium",
+          "url": "https://google.com:443"
+        }
+      ],
+      "social_engineering_vulnerabilities": [
+        {
+          "name": "Suspicious Domain Similarity",
+          "severity": "high",
+          "type": "phishing_vector",
+          "url": "https://google.com:443",
+          "description": "Domain patterns that could indicate typosquatting or phishing domains",
+          "mitigation": "Register similar domains and monitor for typosquatting attacks"
+        },
+        {
+          "name": "Helpful Error Messages",
+          "severity": "low",
+          "type": "human_factor",
+          "url": "https://google.com:443",
+          "description": "Detailed error messages can leak system information to attackers",
+          "mitigation": "Implement generic error messages that don't reveal system information"
+        },
+        {
+          "name": "HTTP Content on HTTPS Site",
+          "severity": "medium",
+          "type": "trust_exploitation",
+          "url": "https://google.com:443",
+          "description": "Mixed content weakens HTTPS security and trust",
+          "mitigation": "Serve all content over HTTPS and implement Content Security Policy"
+        },
+        {
+          "name": "Mixed Content Warnings",
+          "severity": "medium",
+          "type": "trust_exploitation",
+          "url": "https://google.com:443",
+          "description": "Mixed content creates security vulnerabilities and user confusion",
+          "mitigation": "Fix mixed content issues and implement strict HTTPS policies"
+        }
+      ],
+      "cryptographic_vulnerabilities": [],
+      "cloud_vulnerabilities": []
+    }
+  ],
+  "email_servers": [],
+  "databases": [],
+  "frameworks": [],
+  "cms_platforms": [],
+  "cicd_platforms": [],
+  "containers": [],
+  "vulnerabilities": [],
+  "open_ports": [
+    80,
+    443
+  ],
+  "services": {},
+  "social_engineering": {
+    "phishing_indicators": [
+      {
+        "name": "Suspicious Domain Similarity",
+        "severity": "high",
+        "type": "phishing_vector",
+        "url": "https://google.com:443",
+        "description": "Domain patterns that could indicate typosquatting or phishing domains",
+        "mitigation": "Register similar domains and monitor for typosquatting attacks"
+      },
+      {
+        "name": "Login Form Without HTTPS",
+        "severity": "high",
+        "type": "phishing_vector",
+        "url": "http://google.com:80",
+        "description": "Login forms transmitted over HTTP are vulnerable to credential interception and man-in-the-middle attacks",
+        "mitigation": "Implement HTTPS for all authentication pages and enforce TLS encryption"
+      },
+      {
+        "name": "Suspicious Domain Similarity",
+        "severity": "high",
+        "type": "phishing_vector",
+        "url": "http://google.com:80",
+        "description": "Domain patterns that could indicate typosquatting or phishing domains",
+        "mitigation": "Register similar domains and monitor for typosquatting attacks"
+      }
+    ],
+    "email_exposure": [],
+    "social_media_links": [],
+    "human_factor_vulnerabilities": [
+      {
+        "name": "Helpful Error Messages",
+        "severity": "low",
+        "type": "human_factor",
+        "url": "https://google.com:443",
+        "description": "Detailed error messages can leak system information to attackers",
+        "mitigation": "Implement generic error messages that don't reveal system information"
+      },
+      {
+        "name": "Helpful Error Messages",
+        "severity": "low",
+        "type": "human_factor",
+        "url": "http://google.com:80",
+        "description": "Detailed error messages can leak system information to attackers",
+        "mitigation": "Implement generic error messages that don't reveal system information"
+      }
+    ],
+    "trust_exploitation": [
+      {
+        "name": "HTTP Content on HTTPS Site",
+        "severity": "medium",
+        "type": "trust_exploitation",
+        "url": "https://google.com:443",
+        "description": "Mixed content weakens HTTPS security and trust",
+        "mitigation": "Serve all content over HTTPS and implement Content Security Policy"
+      },
+      {
+        "name": "Mixed Content Warnings",
+        "severity": "medium",
+        "type": "trust_exploitation",
+        "url": "https://google.com:443",
+        "description": "Mixed content creates security vulnerabilities and user confusion",
+        "mitigation": "Fix mixed content issues and implement strict HTTPS policies"
+      }
+    ]
+  },
+  "cryptographic": {
+    "key_exposure": [],
+    "certificate_exposure": [],
+    "ssl_weakness": [],
+    "weak_crypto": [],
+    "hardcoded_secrets": [],
+    "artifact_signing": [],
+    "code_signing": []
+  },
+  "cloud": {
+    "cloud_credentials": [],
+    "cloud_storage": [],
+    "cloud_api": [],
+    "cloud_infrastructure": [],
+    "cloud_orchestration": [],
+    "cloud_container": [],
+    "cloud_database": [],
+    "cloud_serverless": [],
+    "cloud_iam": [],
+    "cloud_network": [],
+    "cloud_encryption": [],
+    "cloud_logging": [],
+    "cloud_backup": []
+  }
+}

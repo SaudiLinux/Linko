@@ -1,0 +1,103 @@
+
+Lighter Security Scanner Report
+===============================
+Target: google.com
+Scan Time: 2025-09-24 23:50:13
+Developer: SayerLinux (SaudiLinux1@gmail.com)
+
+Open Ports: 80, 443
+
+Web Servers Detected:
+  - Unknown on port 80 (http)
+    Frameworks: php
+    CMS: magento
+    Vulnerability: Server Version Disclosure (low)
+    Vulnerability: X-Content-Type-Options Missing (low)
+    Vulnerability: Insecure Cookie Configuration (medium)
+    Social Engineering Vulnerabilities:
+      - Login Form Without HTTPS (high)
+        Type: phishing_vector
+        Description: Login forms transmitted over HTTP are vulnerable to credential interception and man-in-the-middle attacks
+        Mitigation: Implement HTTPS for all authentication pages and enforce TLS encryption
+      - Suspicious Domain Similarity (high)
+        Type: phishing_vector
+        Description: Domain patterns that could indicate typosquatting or phishing domains
+        Mitigation: Register similar domains and monitor for typosquatting attacks
+      - Helpful Error Messages (low)
+        Type: human_factor
+        Description: Detailed error messages can leak system information to attackers
+        Mitigation: Implement generic error messages that don't reveal system information
+  - Unknown on port 443 (https)
+    CMS: magento
+    Vulnerability: Server Version Disclosure (low)
+    Vulnerability: X-Content-Type-Options Missing (low)
+    Vulnerability: Insecure Cookie Configuration (medium)
+    Social Engineering Vulnerabilities:
+      - Suspicious Domain Similarity (high)
+        Type: phishing_vector
+        Description: Domain patterns that could indicate typosquatting or phishing domains
+        Mitigation: Register similar domains and monitor for typosquatting attacks
+      - Helpful Error Messages (low)
+        Type: human_factor
+        Description: Detailed error messages can leak system information to attackers
+        Mitigation: Implement generic error messages that don't reveal system information
+      - HTTP Content on HTTPS Site (medium)
+        Type: trust_exploitation
+        Description: Mixed content weakens HTTPS security and trust
+        Mitigation: Serve all content over HTTPS and implement Content Security Policy
+      - Mixed Content Warnings (medium)
+        Type: trust_exploitation
+        Description: Mixed content creates security vulnerabilities and user confusion
+        Mitigation: Fix mixed content issues and implement strict HTTPS policies
+
+Email Servers Detected:
+
+Databases Detected:
+
+CI/CD Platforms Detected:
+
+Container/Orchestration Platforms:
+
+Social Engineering Attack Vectors Detected:
+=============================================
+
+Phishing Indicators:
+  - Login Form Without HTTPS (high)
+    URL: http://google.com:80
+    Description: Login forms transmitted over HTTP are vulnerable to credential interception and man-in-the-middle attacks
+    Mitigation: Implement HTTPS for all authentication pages and enforce TLS encryption
+  - Suspicious Domain Similarity (high)
+    URL: http://google.com:80
+    Description: Domain patterns that could indicate typosquatting or phishing domains
+    Mitigation: Register similar domains and monitor for typosquatting attacks
+  - Suspicious Domain Similarity (high)
+    URL: https://google.com:443
+    Description: Domain patterns that could indicate typosquatting or phishing domains
+    Mitigation: Register similar domains and monitor for typosquatting attacks
+
+Human Factor Vulnerabilities:
+  - Helpful Error Messages (low)
+    URL: http://google.com:80
+    Description: Detailed error messages can leak system information to attackers
+    Mitigation: Implement generic error messages that don't reveal system information
+  - Helpful Error Messages (low)
+    URL: https://google.com:443
+    Description: Detailed error messages can leak system information to attackers
+    Mitigation: Implement generic error messages that don't reveal system information
+
+Trust Exploitation:
+  - HTTP Content on HTTPS Site (medium)
+    URL: https://google.com:443
+    Description: Mixed content weakens HTTPS security and trust
+    Mitigation: Serve all content over HTTPS and implement Content Security Policy
+  - Mixed Content Warnings (medium)
+    URL: https://google.com:443
+    Description: Mixed content creates security vulnerabilities and user confusion
+    Mitigation: Fix mixed content issues and implement strict HTTPS policies
+
+Social Engineering Risk Assessment:
+  Total Social Engineering Vulnerabilities: 7
+  High Severity: 3
+  Medium Severity: 2
+  Low Severity: 2
+  ⚠️  HIGH RISK: 3 critical social engineering vulnerabilities detected!
