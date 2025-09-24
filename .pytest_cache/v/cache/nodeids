@@ -1,1 +1,24 @@
-
+[
+  "test_lighter.py::TestLighterCLI::test_cli_basic",
+  "test_lighter.py::TestLighterCLI::test_cli_with_output",
+  "test_lighter.py::TestLighterScanner::test_cicd_detection_jenkins",
+  "test_lighter.py::TestLighterScanner::test_cms_detection_joomla",
+  "test_lighter.py::TestLighterScanner::test_cms_detection_wordpress",
+  "test_lighter.py::TestLighterScanner::test_container_detection_docker",
+  "test_lighter.py::TestLighterScanner::test_database_detection_mysql",
+  "test_lighter.py::TestLighterScanner::test_email_server_detection_postfix",
+  "test_lighter.py::TestLighterScanner::test_error_handling",
+  "test_lighter.py::TestLighterScanner::test_framework_detection_django",
+  "test_lighter.py::TestLighterScanner::test_framework_detection_flask",
+  "test_lighter.py::TestLighterScanner::test_integration_scan_with_mock_servers",
+  "test_lighter.py::TestLighterScanner::test_performance_large_scan",
+  "test_lighter.py::TestLighterScanner::test_port_scanning",
+  "test_lighter.py::TestLighterScanner::test_report_generation_json",
+  "test_lighter.py::TestLighterScanner::test_report_generation_txt",
+  "test_lighter.py::TestLighterScanner::test_scanner_initialization",
+  "test_lighter.py::TestLighterScanner::test_sensitive_files_detection",
+  "test_lighter.py::TestLighterScanner::test_vulnerability_detection",
+  "test_lighter.py::TestLighterScanner::test_vulnerability_links_detection",
+  "test_lighter.py::TestLighterScanner::test_web_server_detection_apache",
+  "test_lighter.py::TestLighterScanner::test_web_server_detection_nginx"
+]
